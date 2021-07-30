@@ -36,7 +36,7 @@ void delay(void);
 void delay(void)
 {
     volatile unsigned int i = 0;
-    for (i = 0; i < 800000; ++i)
+    for (i = 0; i < 3200000; ++i)
     {
         __asm("NOP"); /* delay */
     }
@@ -45,6 +45,7 @@ void delay(void)
 /*!
  * @brief Main function
  */
+unsigned int Count ;
 int main(void)
 {
     /* Define the init structure for the output LED pin*/
@@ -68,6 +69,8 @@ int main(void)
     while (1)
     {
         delay();
+        Count++ ;
+        PRINTF("\r\n Toggling the LED (%d) ...\r\n", Count);
         GPIO_PortToggle(BOARD_LED_GPIO, 1u << BOARD_LED_GPIO_PIN);
     }
 }
