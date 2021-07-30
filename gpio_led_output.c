@@ -35,7 +35,7 @@ void delay(void);
  ******************************************************************************/
 void delay(void)
 {
-    volatile uint32_t i = 0;
+    volatile unsigned int i = 0;
     for (i = 0; i < 800000; ++i)
     {
         __asm("NOP"); /* delay */
