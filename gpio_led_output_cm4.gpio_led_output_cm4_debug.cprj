@@ -20,8 +20,8 @@
   <target Ddsp="NO_DSP" Dendian="Little-endian" Dfpu="SP_FPU" Dmve="NO_MVE" Dname="K32L3A60VPJ1A" Dsecure="Non-secure" Dtz="NO_TZ" Dvendor="NXP:11" Pname="cm4">
     <output intdir="debug/" name="gpio_led_output_cm4.out" outdir="debug/" type="exe"/>
     <ldflags add="--library_type=microlib --diag_suppress 6314 --strict --remove --entry=Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols --info sizes --info totals --info unused --info veneers" compiler="AC6" file="K32L3A60xxx_cm4_flash.scf"/>
-    <cflags add="-D__MICROLIB -IC:/KEIL/Arm/Pack/NXP/K32L3A60_DFP/13.1.0/Device/Include -O1 -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -fdata-sections -ffreestanding -ffunction-sections -fno-builtin -fno-common -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-4 -mthumb -std=c99 -xc" compiler="AC6"/>
-    <asflags add="-D__MICROLIB -IC:/KEIL/Arm/Pack/NXP/K32L3A60_DFP/13.1.0/Device/Include -gdwarf-3 -masm=gnu" compiler="AC6"/>
+    <cflags add="-D__MICROLIB -O1 -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-missing-noreturn -Wno-missing-prototypes -Wno-missing-variable-declarations -Wno-nonportable-include-path -Wno-packed -Wno-parentheses-equality -Wno-reserved-id-macro -Wno-sign-conversion -Wno-unused-macros -fdata-sections -ffreestanding -ffunction-sections -fno-builtin -fno-common -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-4 -mthumb -std=c99 -xc" compiler="AC6"/>
+    <asflags add="-D__MICROLIB -gdwarf-3 -masm=gnu" compiler="AC6"/>
     <includes>.</includes>
     <defines>CPU_K32L3A60VPJ1A_cm4;DEBUG;MCUXPRESSO_SDK</defines>
   </target>
@@ -60,7 +60,7 @@
       <file category="header" name="clock_config.h"/>
     </group>
     <group name="doc">
-      <file category="doc" name="readme.txt"/>
+      <file category="doc" name="readme.md"/>
     </group>
   </files>
 
