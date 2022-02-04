@@ -1,0 +1,7 @@
+name: ksc_demo_actions
+on:
+  public
+jobs:
+  inform_me:
+    steps:
+      - run: echo 'repo is now public!'
