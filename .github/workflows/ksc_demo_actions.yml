@@ -3,5 +3,6 @@ on:
   public
 jobs:
   inform_me:
+    runs-on: ubuntu-latest
     steps:
       - run: echo 'repo is now public!'
